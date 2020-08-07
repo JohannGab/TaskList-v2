@@ -12,11 +12,11 @@ const Counter = ({ nb, title }) => {
 
 const styles = StyleSheet.create({
     nb: {
-        fontWeight: "bold"
+        fontWeight: "bold",
     },
 
     title: {
-        color: "grey"
+        color: "grey",
     }
 })
 

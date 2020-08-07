@@ -16,10 +16,10 @@ function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     paddingTop: Platform.OS === "android" ? 25 : 0,
-    paddingLeft: 20,
-    paddingRight: 20,
+    marginLeft: 20,
+    marginRight: 20,
   },
 });
 

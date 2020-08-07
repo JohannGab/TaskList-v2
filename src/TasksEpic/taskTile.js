@@ -22,11 +22,9 @@ const TaskTile = ({ id, title, onChangeStatus, completed, onDeleteTask }) => {
                 />
                 <Text style={[styles.title, { color: completed ? "lightgrey" : "black"}]}>{title}</Text> 
             </View>
-            <TouchableOpacity onPress={() => onDeleteTask(id)}>
+            <TouchableOpacity onPress={() => onDeleteTask(id)} >
                 <Image
-                    
                     style={styles.icon}
-                    style={styles.tinyLogo}
                     source={require('../../assets/icon_bin.png')}
                 />
             </TouchableOpacity>
@@ -51,7 +49,7 @@ const styles = StyleSheet.create({
     icon : {
         width: 30,
         height: 30,
-        
+        tintColor: "#59e489",
     }
 })
 
