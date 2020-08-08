@@ -32,7 +32,7 @@ const _onPressBtn = () => {
                 <Button 
                     onPress={_onPressBtn}
                     title="Ajouter"
-                    color={Platform.OS == "android" ? "#841584" : "white"}
+                    color={Platform.OS == "android" ? "#59e489" : "white"}
                 />
             </View>    
         </View>
@@ -55,7 +55,8 @@ const styles = StyleSheet.create({
         width: "75%",
     },
     colorButton: {
-        backgroundColor: "#841584",
+        backgroundColor: "#59e489",
+        borderRadius: 16,
     }
 })
 
