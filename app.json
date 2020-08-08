@@ -17,7 +17,12 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.johann.taskList",
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.johann.taskList",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
