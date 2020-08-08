@@ -3,14 +3,12 @@ import { FlatList } from 'react-native';
 import TaskTile from './taskTile';
 
 
-const TasksList = ({ tasks, onChangeStatus, onDeleteTask }) => {
+const TasksList = ({ tasks }) => {
 const _renderItem = ({ item }) => (
     <TaskTile 
         id={item.id}
         title={item.title}
         completed={item.completed}
-        onChangeStatus={onChangeStatus}
-        onDeleteTask={onDeleteTask}
     />
 );
 
@@ -18,7 +16,7 @@ const _renderItem = ({ item }) => (
         <FlatList 
             data={tasks}
             renderItem={_renderItem}
-            keyExtractor={item => item.id}
+            keyExtractor={item => item.id.toString()}
         />
     )
 }

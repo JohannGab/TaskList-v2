@@ -6,16 +6,20 @@ import {
     Button,
     Platform
 } from 'react-native';
+import { useDispatch } from 'react-redux';
+import { addTask } from '../redux/actions';
 
-const TaskForm = ({ onAddTask }) => {
+const TaskForm = () => {
     const [title, setTitle] = useState("")
+    const dispatch = useDispatch()
+
     const _onChangeText = (value) => {
         setTitle(value)
     }
 
 const _onPressBtn = () => {
     if(title.length > 0) {
-        onAddTask(title); 
+        dispatch(addTask(title))
         setTitle("")
     } 
 }

@@ -6,11 +6,16 @@ import {
     StyleSheet,
     TouchableOpacity
 } from 'react-native';
+import { useDispatch } from 'react-redux'
 
-const TaskTile = ({ id, title, onChangeStatus, completed, onDeleteTask }) => {
+import { toggleTask, deleteTask  } from '../redux/actions'
+
+const TaskTile = ({ id, title, completed }) => {
+    const dispatch = useDispatch() 
+
     return (
     <TouchableOpacity
-        onPress={() => onChangeStatus(id)}
+        onPress={() => dispatch(toggleTask(id))}
     >
         <View style={styles.container}>
             <View style={styles.subContainer}>
@@ -22,7 +27,7 @@ const TaskTile = ({ id, title, onChangeStatus, completed, onDeleteTask }) => {
                 />
                 <Text style={[styles.title, { color: completed ? "lightgrey" : "black"}]}>{title}</Text> 
             </View>
-            <TouchableOpacity onPress={() => onDeleteTask(id)} >
+            <TouchableOpacity onPress={() => dispatch(deleteTask(id))} >
                 <Image
                     style={styles.icon}
                     source={require('../../assets/icon_bin.png')}
